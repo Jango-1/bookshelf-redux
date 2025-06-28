@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+    <title>BookTrack Redux</title>
+</head>
+<body>
+<!--User input section-->
+    <section id="input-area">
+        <img src="./images/logo-plus-wordmark.svg" alr="brand wordmark with logo" style="height: 26px; width: 193.5px;"/>
+
+        <div class="search-section">
+            <input type="text" name="search-bar" id="search" placeholder="Search for a book...">
+        </div>
+
+        <div class="book-form-full-area">
+            <h1>Add a Book:</h1>
+
+            <div id="book-form">
+                <div class="name-section">
+                    <label for="book-name">Book Title</label>
+                    <input type="text" name="book-name-input" id="book-name" placeholder="Book Name" required>
+                </div>
+
+                <div class="author-section">
+                    <label for="book-name">Author Name</label>
+                    <input type="text" name="author-input" id="author-name" placeholder="Author" required>
+                </div>
+
+                <div class="page-section">
+                    <label for="pages">Page Count</label>
+                    <input type="number" name="page-input" id="pages" placeholder="0" required minlength="1">
+                </div>
+
+                <div class="rating-and-status">
+                    <div class="status-section">
+                        <label for="status-select">Status</label>
+                        <select name="status" id="status-select">
+                            <option value=""></option>
+                            <option value="read">Read</option>
+                            <option value="reading">Reading</option>
+                            <option value="on-hold">On Hold</option>
+                            <option value="planned">Planned</option>
+                        </select>
+                    </div>
+                    <div class="rating-section">
+                        <label for="rating-select">Rating</label>
+                        <select name="rating" id="rating-select">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="date-section">
+                    <label for="date-range">Read From</label>
+                    <div class="date-range">
+                        <input type="date" id="start-date" name="book-start" value="2025-06-27" min="1900-01-01" max="2099-12-31"/>
+                        <input type="date" id="end-date" name="book-end" value="2025-06-27" min="1900-01-01" max="2099-12-31"/>
+                    </div>
+                </div>
+            </div>
+            <button class="submit" type="submit">Add to Bookshelf</button>
+        </div>
+    </section>
+        
+
+<!--Library section-->
+    <section id="output-area">
+        <div id="library"></div>
+    </section>
+</body>
+</html>
