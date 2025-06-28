@@ -10,32 +10,32 @@
 <body>
 <!--User input section-->
     <section id="input-area">
-        <img src="./images/logo-plus-wordmark.svg" alr="brand wordmark with logo" style="height: 26px; width: 193.5px;"/>
+        <img src="./images/logo-plus-wordmark.svg" alt="brand wordmark with logo" style="height: 26px; width: 193.5px;"/>
 
         <div class="search-section">
             <input type="text" name="search-bar" id="search" placeholder="Search for a book...">
         </div>
 
-        <div class="book-form-full-area">
+        <div class="full-form-section">
             <h1>Add a Book:</h1>
 
-            <div id="book-form">
-                <div class="name-section">
+            <div id="form-section">
+                <div class="input-section">
                     <label for="book-name">Book Title</label>
-                    <input type="text" name="book-name-input" id="book-name" placeholder="Book Name" required>
+                    <input type="text" name="book-name-input" id="book-name" placeholder="" required>
                 </div>
 
-                <div class="author-section">
+                <div class="input-section">
                     <label for="book-name">Author Name</label>
-                    <input type="text" name="author-input" id="author-name" placeholder="Author" required>
+                    <input type="text" name="author-input" id="author-name" placeholder="" required>
                 </div>
 
-                <div class="page-section">
+                <div class="input-section">
                     <label for="pages">Page Count</label>
-                    <input type="number" name="page-input" id="pages" placeholder="0" required minlength="1">
+                    <input type="number" name="page-input" id="pages" placeholder="" required minlength="1">
                 </div>
 
-                <div class="rating-and-status">
+                <div class="two-input-section">
                     <div class="status-section">
                         <label for="status-select">Status</label>
                         <select name="status" id="status-select">
@@ -59,11 +59,11 @@
                     </div>
                 </div>
 
-                <div class="date-section">
+                <div class="date-input-section">
                     <label for="date-range">Read From</label>
                     <div class="date-range">
-                        <input type="date" id="start-date" name="book-start" value="2025-06-27" min="1900-01-01" max="2099-12-31"/>
-                        <input type="date" id="end-date" name="book-end" value="2025-06-27" min="1900-01-01" max="2099-12-31"/>
+                        <input type="date" id="start-date" name="book-start" value="" min="1900-01-01" max="2099-12-31"/>
+                        <input type="date" id="end-date" name="book-end" value="" min="1900-01-01" max="2099-12-31"/>
                     </div>
                 </div>
             </div>
@@ -73,8 +73,25 @@
         
 
 <!--Library section-->
-    <section id="output-area">
-        <div id="library"></div>
-    </section>
+    <div class="library-viewport">
+        <section id="output-area">
+            <div class="nav-bar">
+                <div class="welcome-message">
+                    <h1>Welcome to your library, User</h1>
+                    <p class="welcome-sentence">Tracking your reading has never been easier.</p>
+                </div>
+                <div class="utility-section">
+                    <div class="profile-image">
+                        <img src="./images/profile-img.png" alt="example profile image" style="height: 36px; width: 36px;"/>
+                    </div>
+                    <img src="images/gear.svg" alt="settings gear icon" style="height: 14px; width: 14px;"/>
+                    <img src="images/bell.svg" alt="settings gear icon" style="height: 12px; width: 11px;"/>
+                    <img src="images/flag.svg" alt="language flag icon" style="height: 100%; width: 28px;"/>
+                </div>
+            </div>
+            
+            <div id="library"></div>
+        </section>
+    </div>
 </body>
 </html>

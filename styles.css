@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 :root {
     --base-800: #02101D;
     --base-700: #112333;
@@ -35,6 +39,18 @@ body {
     color: var(--base-50);
 }
 
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+
+/*Input Section Styles*/
+
+
 #input-area {
     display: flex;
     flex-direction: column;
@@ -44,4 +60,143 @@ body {
     gap: 44px;
     padding: 28px;
     border-right: .5px solid var(--base-300) ;
+}
+
+label {
+    font-size: .8rem;
+    color: var(--base-300);
+}
+
+#search {
+    font: inherit;
+    height: 42px;
+    width: 100%;
+    color: var(--base-50);
+}
+
+.full-form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.two-input-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.rating-section,
+.status-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 112px;
+}
+
+.date-input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.date-range {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#start-date,
+#end-date {
+    width: 112px;
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+    background: var(--base-700);
+    color: var(--base-100);
+    border: 1.5px solid var(--base-300);
+    border-radius: 4px;
+    height: 28px;
+    padding:  0.5rem 0.75rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border: 1.5px solid var(--primary-brand);
+}
+
+::placeholder {
+    color: var(--base-50);
+}
+
+button {
+    font: inherit;
+    background-color: var(--primary-brand);
+    color: var(--base-50);
+    border: none;
+    border-radius: 40px;
+    height: 36px;
+}
+
+
+/*Library Section Styles*/
+
+
+.library-viewport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 800px;
+    width: 100vw;
+}
+
+#output-area {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.welcome-message {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.welcome-sentence {
+    font-size: .9rem;
+    color: var(--base-50);
+    font-style: italic;
+}
+
+.utility-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
 }
