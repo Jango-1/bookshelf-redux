@@ -167,6 +167,13 @@ button {
     width: 100vw;
 }
 
+#library {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 28px;
+}
+
 #output-area {
     display: flex;
     flex-direction: column;
@@ -199,4 +206,94 @@ button {
     flex-direction: row;
     align-items: center;
     gap: 32px;
+}
+
+details > summary {
+    list-style: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0;
+}
+
+details > summary::-webkit-details-marker { display: none; }
+
+details > summary::after {
+  content: "";
+  inline-size: 0.6rem;
+  block-size: 0.6rem;
+  border-block-end: 2px solid var(--primary-brand);
+  border-inline-end: 2px solid var(--primary-brand);
+  transform: rotate(-45deg);
+  transition: transform .2s ease;
+}
+
+details[open] > summary::after {
+  transform: rotate(45deg);
+}
+.book-list {
+    margin: 0; padding: 0; list-style: none;
+    background-color: var(--base-500);
+    height: 48px;
+    border-radius: 16px;
+    padding: 0 26px 0 26px;
+    display: flex;
+    align-items: center;
+}
+
+.book-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/*
+.book-row {
+    display: grid;
+    grid-template-columns:
+        16px
+        1fr
+        1px
+        1fr
+        1px
+        1fr
+        1px
+        64px
+        1px
+        100px
+        24px
+        100px
+        1px
+        40px;
+    align-items: center;
+    column-gap: 12px;
+}
+*/
+
+.status-dot { inline-size: .75rem; block-size: .75rem; border-radius: 50%; background: var(--utility-green);;}
+.book-row[data-status="reading"]   .status-dot { background: var(--utility-yellow); }
+.book-row[data-status="to-read"]   .status-dot { background: var(--utility-purple); }
+.book-row[data-status="abandoned"] .status-dot { background: var(--utility-red); }
+.divider { inline-size: 1px; block-size: 1rem; background: var(--base-700); }
+
+.book-row > span {
+    text-align: center;
+}
+
+.shelf-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shelf-header {
+    color: var(--base-50);
+}
+
+.shelf-header-recent {
+    color: var(--primary-brand);
 }

@@ -50,6 +50,6 @@ button.addEventListener('click', () => {
 });
 
 // Placeholder books
-addBookToLibrary("Lord of the Rings", "J RR Tolkien", "500");
-addBookToLibrary("Song of Solomon", "Toni Morrison", "280");
-displayBooks();
+//addBookToLibrary("Lord of the Rings", "J RR Tolkien", "500");
+//addBookToLibrary("Song of Solomon", "Toni Morrison", "280");
+//displayBooks();
